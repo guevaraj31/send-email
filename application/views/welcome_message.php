@@ -69,9 +69,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h1>Reserva</h1>
+	<?php if($send_check)
+	{ ?>
+		<h4>Datos enviados exitosamente!</h4>	
+	<?php 
+	} ?>
+
 
 	<div id="body">
-		<form>
+		<form method="POST" id="form_booking_one" name="form_booking_one">
 			<label>Fecha</label>
 			<input type="date" name="booking_date" id="booking_date">
 
